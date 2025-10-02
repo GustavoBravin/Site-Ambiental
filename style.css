@@ -1,0 +1,315 @@
+   * {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+   }
+
+   body {
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       line-height: 1.6;
+       color: #333;
+   }
+
+   /* Header e Navegação */
+   header {
+       background: linear-gradient(135deg, #2d5016 0%, #4a7c2a 100%);
+       padding: 1rem 0;
+       position: fixed;
+       width: 100%;
+       top: 0;
+       z-index: 1000;
+       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+   }
+
+   nav {
+       max-width: 1200px;
+       margin: 0 auto;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       padding: 0 2rem;
+   }
+
+   .logo {
+       display: flex;
+       align-items: center;
+       color: white;
+       font-size: 1.5rem;
+       font-weight: bold;
+   }
+
+   .nav-links {
+       display: flex;
+       gap: 2rem;
+       list-style: none;
+   }
+
+   .nav-links a {
+       color: white;
+       text-decoration: none;
+       transition: color 0.3s;
+       font-weight: 500;
+   }
+
+   .nav-links a:hover {
+       color: #c8a882;
+   }
+
+   /* Hero Section */
+   .hero {
+       margin-top: 70px;
+       background: linear-gradient(rgba(45, 80, 22, 0.7), rgba(74, 124, 42, 0.7)),
+           url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%232d5016" width="1200" height="600"/><path fill="%234a7c2a" opacity="0.3" d="M0 300 Q300 150 600 300 T1200 300 V600 H0Z"/></svg>');
+       background-size: cover;
+       background-position: center;
+       color: white;
+       padding: 120px 2rem;
+       text-align: center;
+   }
+
+   .hero h1 {
+       font-size: 3rem;
+       margin-bottom: 1rem;
+       animation: fadeInUp 1s ease-out;
+   }
+
+   .hero p {
+       font-size: 1.3rem;
+       max-width: 800px;
+       margin: 0 auto 2rem;
+       animation: fadeInUp 1s ease-out 0.3s both;
+   }
+
+   @keyframes fadeInUp {
+       from {
+           opacity: 0;
+           transform: translateY(30px);
+       }
+
+       to {
+           opacity: 1;
+           transform: translateY(0);
+       }
+   }
+
+   /* Seções */
+   section {
+       padding: 80px 2rem;
+       max-width: 1200px;
+       margin: 0 auto;
+   }
+
+   section h2 {
+       color: #2d5016;
+       font-size: 2.5rem;
+       margin-bottom: 3rem;
+       text-align: center;
+       position: relative;
+   }
+
+   section h2::after {
+       content: '';
+       display: block;
+       width: 80px;
+       height: 4px;
+       background: #c8a882;
+       margin: 1rem auto;
+   }
+
+   /* Sobre */
+   .sobre-content {
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       gap: 3rem;
+       align-items: center;
+   }
+
+   .sobre-text p {
+       margin-bottom: 1.5rem;
+       color: #555;
+       font-size: 1.1rem;
+       text-align: justify;
+   }
+
+   .sobre-image {
+       background: linear-gradient(135deg, #2d5016, #4a7c2a);
+       height: 400px;
+       border-radius: 10px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       color: white;
+       font-size: 1.2rem;
+       text-align: center;
+       padding: 2rem;
+   }
+
+   /* Serviços */
+   .servicos-grid {
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+       gap: 2rem;
+   }
+
+   .servico-card {
+       background: white;
+       padding: 2rem;
+       border-radius: 10px;
+       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+       transition: transform 0.3s, box-shadow 0.3s;
+       text-align: center;
+   }
+
+   .servico-card:hover {
+       transform: translateY(-10px);
+       box-shadow: 0 10px 30px rgba(45, 80, 22, 0.2);
+   }
+
+   .servico-icon {
+       width: 80px;
+       height: 80px;
+       background: linear-gradient(135deg, #2d5016, #4a7c2a);
+       border-radius: 50%;
+       margin: 0 auto 1.5rem;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       font-size: 2rem;
+   }
+
+   .servico-card h3 {
+       color: #2d5016;
+       margin-bottom: 1rem;
+       font-size: 1.3rem;
+   }
+
+   .servico-card p {
+       color: #666;
+       line-height: 1.8;
+   }
+
+   /* Quem Sou */
+   #quem-sou {
+       background: #f9f9f9;
+   }
+
+   .perfil-content {
+       display: grid;
+       grid-template-columns: 300px 1fr;
+       gap: 3rem;
+       align-items: center;
+   }
+
+   .perfil-foto {
+       width: 300px;
+       height: 300px;
+       background: linear-gradient(135deg, #c8a882, #d4b896);
+       border-radius: 50%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       color: white;
+       font-size: 1.2rem;
+       text-align: center;
+       padding: 2rem;
+       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+   }
+
+   .perfil-text p {
+       margin-bottom: 1.5rem;
+       color: #555;
+       font-size: 1.1rem;
+       text-align: justify;
+   }
+
+   /* Contato */
+   .contato-content {
+       text-align: center;
+   }
+
+   .contato-buttons {
+       display: flex;
+       gap: 2rem;
+       justify-content: center;
+       flex-wrap: wrap;
+       margin-top: 3rem;
+   }
+
+   .btn {
+       padding: 1rem 2.5rem;
+       border-radius: 50px;
+       text-decoration: none;
+       font-weight: 600;
+       transition: all 0.3s;
+       display: inline-flex;
+       align-items: center;
+       gap: 0.5rem;
+       font-size: 1.1rem;
+   }
+
+   .btn-whatsapp {
+       background: #25D366;
+       color: white;
+   }
+
+   .btn-whatsapp:hover {
+       background: #20BA5A;
+       transform: scale(1.05);
+   }
+
+   .btn-instagram {
+       background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+       color: white;
+   }
+
+   .btn-instagram:hover {
+       transform: scale(1.05);
+       box-shadow: 0 5px 20px rgba(225, 48, 108, 0.4);
+   }
+
+   .btn-linkedin {
+       background: #0077B5;
+       color: white;
+   }
+
+   .btn-linkedin:hover {
+       background: #006399;
+       transform: scale(1.05);
+   }
+
+   /* Footer */
+   footer {
+       background: #2d5016;
+       color: white;
+       text-align: center;
+       padding: 2rem;
+   }
+
+   /* Responsivo */
+   @media (max-width: 768px) {
+       .nav-links {
+           flex-direction: column;
+           gap: 1rem;
+       }
+
+       .hero h1 {
+           font-size: 2rem;
+       }
+
+       .hero p {
+           font-size: 1.1rem;
+       }
+
+       .sobre-content,
+       .perfil-content {
+           grid-template-columns: 1fr;
+       }
+
+       .perfil-foto {
+           margin: 0 auto;
+       }
+
+       section h2 {
+           font-size: 2rem;
+       }
+   }
